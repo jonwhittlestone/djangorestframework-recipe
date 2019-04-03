@@ -13,3 +13,5 @@ A showcase djangorestframework api for creating and finding recipes.
 2. Create docker-compose app service and created an empty django app
 
    `docker-compose run app sh -c "django-admin.py startproject app."`
+
+3. Add flake8 and Travis-CI configuration
