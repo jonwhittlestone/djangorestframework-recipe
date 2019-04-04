@@ -2,6 +2,8 @@
 
 A showcase djangorestframework api for creating and finding recipes.
 
+[![Build Status](https://travis-ci.org/jonwhittlestone/djangorestframework-recipe.svg?branch=master)](https://travis-ci.org/jonwhittlestone/djangorestframework-recipe)
+
 ---
 
 ## Database visualised
