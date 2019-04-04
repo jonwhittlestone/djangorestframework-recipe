@@ -28,4 +28,6 @@ The recipe table is central to the app and when finished, should look like this 
 
 4. Create `core` app with separate tests directory
 
-5. Step 5. Configure Custom User Model to use email not username (plus some tests)
+5. Configure Custom User Model to use email not username (plus some tests)
+
+6. Setting up Django Admin. Test-Driven, the ability to list, add users
