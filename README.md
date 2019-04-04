@@ -25,3 +25,5 @@ The recipe table is central to the app and when finished, should look like this 
 3. Add flake8 and Travis-CI configuration
 
 4. Create `core` app with separate tests directory
+
+5. Step 5. Configure Custom User Model to use email not username (plus some tests)
