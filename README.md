@@ -14,6 +14,18 @@ The recipe table is central to the app and when finished, should look like this 
 
 ---
 
+## Tests
+
+As per the CI config:
+
+`# you may need to build containers`
+
+`# docker-compose build`
+
+`docker-compose run app sh -c "python manage.py test && flake8"`
+
+---
+
 ## Commit Steps
 
 1. Simple docker install. Python container with Django and DRF
@@ -31,3 +43,12 @@ The recipe table is central to the app and when finished, should look like this 
 5. Configure Custom User Model to use email not username (plus some tests)
 
 6. Setting up Django Admin. Test-Driven, the ability to list, add users
+
+7. Add postgres support with tested/mocked management command
+   1. run added test
+      - `docker-compose run app sh -c "python manage.py test core.tests.test_commands.CommandTests "`
+   2. create superuser (optional)
+   - `docker-compose run app sh -c "python manage.py createsuperuser"`
+   3. bring up containers
+      - `docker-compose up -d`
+   4. Visit in browser `http://localhost:8000/admin`
