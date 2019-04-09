@@ -56,7 +56,7 @@ As per the CI config:
       - `docker-compose up -d`
    4. Visit in browser `http://localhost:8000/admin`
 
-8. Add drf and API endpoints and tests for adding and authenticating users
+8. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/77ce19e9e4f51a53b3bfb554565d68b2368fa807) Add drf and API endpoints and tests for adding and authenticating users
 
    - example CURL statement for manual replication
 
@@ -81,3 +81,5 @@ As per the CI config:
       user
       ------WebKitFormBoundary7MA4YWxkTrZu0gW--
      ```
+
+9. Add test and API endpoints for modifying a user
