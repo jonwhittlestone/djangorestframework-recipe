@@ -28,23 +28,23 @@ As per the CI config:
 
 ## Commit Steps
 
-1. Simple docker install. Python container with Django and DRF
+1. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/4a76bb968d4dbbe897cc34b4d618088f45eb4872) Simple docker install. Python container with Django and DRF
 
    To invoke, run `docker build .`
 
-2. Create docker-compose app service and created an empty django app
+2. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/9345b01cc913cdb6cddd510fa6c6ce2188bab5ef)Create docker-compose app service and created an empty django app
 
    `docker-compose run app sh -c "django-admin.py startproject app."`
 
-3. Add flake8 and Travis-CI configuration
+3. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/d733adc891a1f326245646ac6b031de359725fc8)Add flake8 and Travis-CI configuration
 
-4. Create `core` app with separate tests directory
+4. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/d31b27d480799af16c534b71f44be61d1628577a)Create `core` app with separate tests directory
 
-5. Configure Custom User Model to use email not username (plus some tests)
+5. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/88dbf0ecb0836f6f173f7b95b44fc395ac1d9f34)Configure Custom User Model to use email not username (plus some tests)
 
-6. Setting up Django Admin. Test-Driven, the ability to list, add users
+6.[[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/9345b01cc913cdb6cddd510fa6c6ce2188bab5ef) Setting up Django Admin. Test-Driven, the ability to list, add users
 
-7. Add postgres support with tested/mocked management command
+7. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/96ad21870191114c1c57255e29d51516f1eb3f0d)Add postgres support with tested/mocked management command
    1. run added test
       - `docker-compose run app sh -c "python manage.py test core.tests.test_commands.CommandTests "`
    2. create superuser (optional)
