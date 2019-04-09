@@ -42,13 +42,42 @@ As per the CI config:
 
 5. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/88dbf0ecb0836f6f173f7b95b44fc395ac1d9f34)Configure Custom User Model to use email not username (plus some tests)
 
-6.[[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/9345b01cc913cdb6cddd510fa6c6ce2188bab5ef) Setting up Django Admin. Test-Driven, the ability to list, add users
+6. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/9345b01cc913cdb6cddd510fa6c6ce2188bab5ef) Setting up Django Admin. Test-Driven, the ability to list, add users
 
 7. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/96ad21870191114c1c57255e29d51516f1eb3f0d)Add postgres support with tested/mocked management command
+
    1. run added test
       - `docker-compose run app sh -c "python manage.py test core.tests.test_commands.CommandTests "`
    2. create superuser (optional)
+
    - `docker-compose run app sh -c "python manage.py createsuperuser"`
+
    3. bring up containers
       - `docker-compose up -d`
    4. Visit in browser `http://localhost:8000/admin`
+
+8. Add drf and API endpoints and tests for adding and authenticating users
+
+   - example CURL statement for manual replication
+
+     ```
+      POST /api/user/create/? HTTP/1.1
+      Host: 127.0.0.1:8000
+      Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+      Accept: application/json
+      cache-control: no-cache
+      Postman-Token: 06ad72c6-8f61-46cc-bc45-8959aeebef3c
+
+      Content-Disposition: form-data; name="email"
+
+      user@howapped.com
+
+      Content-Disposition: form-data; name="password"
+
+      test1
+
+      Content-Disposition: form-data; name="name"
+
+      user
+      ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+     ```
