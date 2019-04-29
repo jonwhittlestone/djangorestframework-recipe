@@ -82,4 +82,6 @@ As per the CI config:
       ------WebKitFormBoundary7MA4YWxkTrZu0gW--
      ```
 
-9. Add test and API endpoints for modifying a user
+9. [[commit]](https://github.com/jonwhittlestone/djangorestframework-recipe/commit/d4dcab14f436e559ba356ff7dc5493a925e81605) Add test and API endpoints for modifying a user
+
+10. Add model, migration, API endpoints for listing and creating tags
